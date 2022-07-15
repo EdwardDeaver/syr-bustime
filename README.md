@@ -27,7 +27,7 @@ All stops on the P1 route:
 	 
 Next bus at stop 8165 ("East Liberty Station stop A")	 
 
-	>>> api.predictions(stpid=8165, maxprediction=1)
+	>>> api.predictions(stpid=8165, maxpredictions=1)
 	OrderedDict([(u'prd', OrderedDict([(u'tmstmp', u'20140815 15:06:35'), (u'typ', u'A'), (u'stpnm', u'East Liberty Station stop A'), (u'stpid', u'8165'), 
 	(u'vid', u'3241'), (u'dstp', u'955'), (u'rt', u'P1'), (u'rtdir', u'OUTBOUND'), (u'des', u'East Busway to Swissvale'), (u'prdtm', u'20140815 15:06:55'), 
 	(u'tablockid', u'P1  -370'), (u'tatripid', u'51924'), (u'zone', None)]))])

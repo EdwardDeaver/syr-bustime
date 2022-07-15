@@ -44,14 +44,14 @@ class BustimeAPI(object):
     __api_version__ = 'v1'
     
     ENDPOINTS = dict(
-        SYSTIME = "http://realtime.portauthority.org/bustime/api/v1/gettime",
-        VEHICLES = "http://realtime.portauthority.org/bustime/api/v1/getvehicles",
-        ROUTES = "http://realtime.portauthority.org/bustime/api/v1/getroutes",
-        R_DIRECTIONS = "http://realtime.portauthority.org/bustime/api/v1/getdirections",
-        STOPS = "http://realtime.portauthority.org/bustime/api/v1/getstops",
-        R_GEO = "http://realtime.portauthority.org/bustime/api/v1/getpatterns",
-        PREDICTION = "http://realtime.portauthority.org/bustime/api/v1/getpredictions",
-        BULLETINS = "http://realtime.portauthority.org/bustime/api/v1/getservicebulletins"
+        SYSTIME = "http://bus-time.centro.org/bustime/api/v3/gettime",
+        VEHICLES = "http://bus-time.centro.org/bustime/api/v3/getvehicles",
+        ROUTES = "http://bus-time.centro.org/bustime/api/v3/getroutes",
+        R_DIRECTIONS = "http://bus-time.centro.org/bustime/api/v3/getdirections",
+        STOPS = "http://bus-time.centro.org/bustime/api/v3/getstops",
+        R_GEO = "http://bus-time.centro.org/bustime/api/v3/getpatterns",
+        PREDICTION = "http://bus-time.centro.org/bustime/api/v3/getpredictions",
+        BULLETINS = "http://bus-time.centro.org/bustime/api/v3/getservicebulletins"
     )
     
     RESPONSE_TOKEN = "bustime-response"
@@ -362,7 +362,7 @@ class BustimeAPI(object):
         return self.response(url)
         
     def detournotices(self, rt):
-        from BeautifulSoup import BeautifulSoup
+        from BeautifulSoup4 import BeautifulSoup4
         from datetime import datetime
         URL = "http://www.portauthority.org/paac/apps/detoursdnn/pgDetours.asp?mode=results&s=Route&Type=Detour"
         _strptime = "%m/%d/%Y"
